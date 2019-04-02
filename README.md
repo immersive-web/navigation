@@ -4,11 +4,11 @@
 
 Current workflow to [request a WebXR session](https://www.w3.org/TR/webxr/#dom-xr-requestsession) requires user gesture activation. 2D Pages usually provide a button that users have to click or tap to trigger immersive mode.
 
-Some scenarios require entering immersive mode automatically. A mechanism for UAs to grant immersive sessions without user gesture is needed.
+Some scenarios require entering immersive mode automatically without user gesture activation. They necessitate a mechanism for UAs to also grant immersive sessions.
 
 ## Design Goals
 
-The goal of this repository is to discuss and design a simple mechanism for UAs to grant immersive sessions in certain scenarios.
+The goal of this repository is to discuss and design a simple API for UAs to grant immersive sessions without an explicit user activation in specific scenarios.
 
 ## User Scenarios
 
@@ -32,7 +32,7 @@ The goal of this repository is to discuss and design a simple mechanism for UAs 
 
 ## API Proposal
 
-UAs fire a `sessiongranted` event that explicitly allows content to enter immersive mode. This is how the API could look like:
+UAs fire a `sessiongranted` event that allows content to enter immersive mode without user gesture activation:
 
 ```
 navigator.xr.addEventListener('sessiongranted', function (evt) {
@@ -47,7 +47,7 @@ navigator.xr.addEventListener('sessiongranted', function (evt) {
 }
 ```
 
-This is similar to the [WebVR displayactivate event](https://immersive-web.github.io/webvr/spec/1.1/#dom-window-onvrdisplayactivate) that most popular libraries and frameworks implement alongide user activated flows. The UA always remains in control on when immersive sessions are granted.
+This is similar to the [WebVR displayactivate event](https://immersive-web.github.io/webvr/spec/1.1/#dom-window-onvrdisplayactivate) that popular libraries and frameworks incorporate alongide user gesture activated flows. The UA always remains in control on when immersive sessions are granted and can also revoke them.
 
 ## Security considerations
 
