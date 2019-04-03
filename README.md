@@ -62,6 +62,10 @@ In immersive mode the Browser UI is not always rendered and content controls all
 - Modal dialog. User can invoke the browser UI at all times to consult info about the current site. UAs UI can also be modal (similar to Oculus or Steam home spaces) and invoked with a reserved button or interaction that cannot be listened by content. To prevent spoofing, UAs could additionally display personal information that user can recognize and pages don't have access to (user generated doodles or environment choices)
 - Fall back to windowed mode. Some UAs might decide to retain a more traditional flow and always fallback to windowed / 2D mode on navigation.
 
+## Developer and library maintainers considerations.
+
+ The `sessiongranted` event is low friction and agnostic. It doesn't tie or prescribe a specific browser UX allowing experimentation and innovation in the space. Some browsers might decide to offer a traditional windowed workflow that fallback to 2D, others a more immersive experience. Content creators and library maintainers have to consider just two flows: User and UA initiated immersive sessions via user gesture and sessiongranted event respectively.
+
 ## Privacy considerations.
 
 TO-DO
