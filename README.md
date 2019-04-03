@@ -64,7 +64,7 @@ In immersive mode the Browser UI is not always rendered and content controls all
 
 ## Developer and library maintainers considerations.
 
- The `sessiongranted` event is low friction and agnostic. It doesn't tie or prescribe a specific browser UX allowing experimentation and innovation in the space. Some browsers might decide to offer a traditional windowed workflow that fallback to 2D, others a more immersive experience. Content creators and library maintainers have to consider just two flows: User and UA initiated immersive sessions via user gesture and sessiongranted event respectively.
+The `sessiongranted` event is low friction and agnostic. It doesn't tie or prescribe a specific browser UX allowing experimentation and innovation in the space. Some browsers might decide to offer a traditional windowed workflow that fallback to 2D, others a more immersive experience. Content creators and library maintainers have to consider just two flows: User and UA initiated immersive sessions via user gesture and sessiongranted event respectively.
 
 ## Privacy considerations.
 
