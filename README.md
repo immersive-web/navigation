@@ -10,6 +10,10 @@ Some scenarios require entering immersive mode automatically without user gestur
 
 The goal of this repository is to discuss and design a simple API for UAs to grant immersive sessions without an explicit user activation in specific scenarios.
 
+## Non Goals
+
+Define how a Virtual Reality or Augmented Reality browser would work [in alignment with the WebXR spec](https://github.com/immersive-web/webxr/blob/master/explainer.md#non-goals)
+
 ## User Scenarios
 
 1. Immersive navigation, allowing UAs to implement seamless transitions between interlinked VR and AR content. Use cases include:
