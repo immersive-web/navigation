@@ -4,7 +4,7 @@
 
 Current workflow to [request a WebXR session](https://www.w3.org/TR/webxr/#dom-xr-requestsession) requires user gesture activation. 2D Pages usually provide a button that users click or tap to trigger immersive mode.
 
-Some scenarios like in-vr navigation require entering immersive mode automatically without user gesture activation. This necessitates a standard mechanism for UAs grant immersive sessions.
+Some scenarios like in-vr navigation require entering immersive mode automatically without user gesture activation. This necessitates a standard mechanism for UAs to grant immersive sessions.
 
 ## Design Goals
 
