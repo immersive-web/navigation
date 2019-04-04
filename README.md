@@ -55,16 +55,18 @@ This is similar to the [WebVR displayactivate event](https://immersive-web.githu
 
 ## Security considerations
 
-In immersive mode the Browser UI is not always rendered and content controls all display real estate. During immersive navigation, UAs must guide and keep the user informed at all times to prevent spoofing and give the user control of displayed content. Possible mechanisms are:
+In immersive mode the Browser UI may not be rendered and content controls all display real estate. The UA must steward users giving them information and control over displayed content at all times.
+
+Spoofing is a potential risk during immersive navitagion. A malicious site could masquerade legitimate content, the browser UI or even the underling operating system interface without user noticing. Possible mitigaton mechanisms are:
 
 - Interstitial. When navigation occurs the UA can present the user a screen to evaluate the destination URL, an experience description and a button to continue or return to previous site.
 - Overlays. UAs control compositing and can always render information about the navigated page over content.
-- Modal dialog. User can invoke the browser UI at all times to consult info about the current site. UAs UI can also be modal (similar to Oculus or Steam home spaces) and invoked with a reserved button or interaction that cannot be listened by content. To prevent spoofing, UAs could additionally display personal information that user can recognize and pages don't have access to (user generated doodles or environment choices)
+- Modal dialog. User can invoke the browser UI at all times to interrupt or consult info about the current site. A modal interface (similar to Oculus or Steam home spaces) could be showed on demand with a reserved button or interaction that cannot be listened by content. To prevent spoofing, UAs could additionally display personal information that user can recognize and pages don't have access to (user generated doodles or environment choices)
 - Fall back to windowed mode. Some UAs might decide to retain a more traditional flow and always fallback to windowed / 2D mode on navigation.
 
 ## Developer and library maintainers considerations.
 
-The `sessiongranted` event is low friction and agnostic. It doesn't tie or prescribe a specific browser UX allowing experimentation and innovation in the space. Some browsers might decide to offer a traditional windowed workflow that fallback to 2D, others a more immersive experience. Content creators and library maintainers have to consider just two flows: User and UA initiated immersive sessions via user gesture and sessiongranted event respectively.
+The `sessiongranted` event is low friction and agnostic. It doesn't tie or prescribe a specific browser UX allowing experimentation and innovation in the space. Some browsers might decide to offer a traditional windowed workflow that falls back to 2D, others a more immersive experience. Content creators and library maintainers have to consider just two flows: User and UA initiated immersive sessions via user gesture and sessiongranted event respectively.
 
 ## Privacy considerations.
 
