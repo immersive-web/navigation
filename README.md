@@ -70,11 +70,17 @@ The `sessiongranted` event is low friction and agnostic. It doesn't tie or presc
 
 ## Privacy considerations.
 
-TO-DO
+### Exposing State About the Client or Previous Page
+
+Varying the behavior based on client state (e.g., is the UA displaying multiple tabs) or the state of the previous page (e.g., whether the previous page had an active immersive session) leaks state about the user and user’s behavior that is not otherwise available to applications.
+
+This may be acceptable for same-origin transitions, since the application could have already known the state. However, this is not acceptable for cross-origin transitions, including history and background documents.
 
 ## Same-Origin vs. Cross-Origin Navigation
 
-TO-DO
+For navigation scenarios (scenario #1), it may be relevant whether the target URL has the same origin as the existing page. Specifically, since the user has already interacted with the origin, it may be reasonable for implementations to be more permissive in such cases.
+
+However, allowing one but not the other would lead to an [Inconsistent User Experience](https://github.com/immersive-web/webxr/blob/master/designdocs/navigation.md#inconsistent-user-experience).
 
 ## References
 
