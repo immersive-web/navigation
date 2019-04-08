@@ -28,7 +28,7 @@ While this discussion may make recommendations or define requirements for requir
     - Content portals in general (directories of games, immersive videos, collections).
     - Personal storefronts that link to products hosted by eBay VR, Amazon VR. One could also easily incorporate product 3D models hosted externally in services the like of Sketchfab or Google Blocks.
 
-2. In an AR browser, virtual objects might be fetched from different URLs and rendered in physical context. Content is expected to always present at load time.
+2. In an AR browser, a page will display virtual objects in physical context. Sites present 3D content immediately at load time without going through a 2D page workflow first.
 
 3. Open in immersive mode. 2D windowed browsers might offer a way to open a link directly immersive mode, similar to "open in new tab" or "open in new page" actions offered today.
 
