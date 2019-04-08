@@ -8,7 +8,7 @@ Some scenarios like in-vr navigation require pages to enter immersive mode immed
 
 ## Design Goals
 
-The goal of this repository is to discuss and design a simple API for UAs to grant immersive sessions without an explicit user activation in specific scenarios.
+The goal of this repository is to discuss and design a simple API for UAs to explicitly grant immersive sessions.
 
 ## Non Goals
 
