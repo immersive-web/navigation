@@ -30,7 +30,7 @@ While this discussion may make recommendations or define requirements for requir
 
 2. In an AR browser, a page will display virtual objects in physical context. Sites present 3D content immediately at load time without going through a 2D page workflow first.
 
-3. Open in immersive mode. 2D windowed browsers might offer a way to open a link directly immersive mode, similar to "open in new tab" or "open in new page" actions offered today.
+3. Open in immersive mode. 2D windowed browsers might offer a way to open a link directly immersive mode, similar to "open in new tab" or "open in new window" actions offered today. This and other UA approaches could automatically grant permission to create an immersive session.
 
 4. Intents, deep linking, PWA, kiosk mode. Native aplications might request the browser to open content directly in immersive mode.
 
