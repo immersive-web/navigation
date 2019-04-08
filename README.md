@@ -32,9 +32,14 @@ While this discussion may make recommendations or define requirements for requir
 
 3. Open in immersive mode. 2D windowed browsers might offer a way to open a link directly immersive mode, similar to "open in new tab" or "open in new window" actions offered today. This and other UA approaches could automatically grant permission to create an immersive session.
 
-4. Intents, deep linking, PWA, kiosk mode. Native aplications might request the browser to open content directly in immersive mode.
+4. Kiosk mode. In public spaces like museums or trade shows one could setup an URL as `virtual homescreen`: A page that loads and enters immersive mode automatically when the browser starts.
 
-5. Performance implications of single page applications. Having different web pages load is sort of beneficial for not having to deal with offloading / onloading new models and environments or making your own interstitial. You can avoid frame drops by letting the browser handle the transition, and VR web pages load quick enough.
+5. Intents and deep linking. Native aplications might request a
+browser to open content directly in immersive mode.
+
+6. [PWA](https://developers.google.com/web/progressive-web-apps/) An installed progressive WebXR app will enter immersive mode at launch.
+
+7. Performance implications of single page applications. Having different web pages load is sort of beneficial for not having to deal with offloading / onloading new models and environments or making your own interstitial. You can avoid frame drops by letting the browser handle the transition, and VR web pages load quick enough.
 
 ## API Proposal
 
