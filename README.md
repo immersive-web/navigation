@@ -14,6 +14,8 @@ The goal of this repository is to discuss and design a simple API for UAs to exp
 
 Define how a Virtual Reality or Augmented Reality browser would work [in alignment with the WebXR spec](https://github.com/immersive-web/webxr/blob/master/explainer.md#non-goals)
 
+While this discussion may make recommendations or define requirements for required behavior for informing users about targeted URLs for navigation, for example, the actual behavior and mechanism a browser should implement is not a goal of this proposal.
+
 ## User Scenarios
 
 1. Immersive navigation, allowing UAs to implement seamless transitions between interlinked VR and AR content. Use cases include:
