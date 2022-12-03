@@ -60,11 +60,13 @@ navigator.xr.addEventListener('sessiongranted', function (evt) {
 
 This is similar to the [WebVR displayactivate event](https://immersive-web.github.io/webvr/spec/1.1/#dom-window-onvrdisplayactivate) that popular libraries and frameworks incorporate alongide user gesture activated flows. The UA always remains in control on when immersive sessions are granted and can also revoke them.
 
+It is important that the new session starts the animation loop as soon as possible. Otherwise the compositor may end the immersive session.
+
 ## Security considerations
 
 In immersive mode the Browser UI may not be rendered and content controls all display real estate. The UA must steward users giving them information and control over displayed content at all times.
 
-Spoofing is a potential risk during immersive navitagion. A malicious site could masquerade legitimate content, the browser UI or even the underling operating system interface without user noticing. Possible mitigaton mechanisms are:
+Spoofing is a potential risk during immersive navitagion across origins. A malicious site could masquerade legitimate content, the browser UI or even the underling operating system interface without user noticing. Possible mitigaton mechanisms are:
 
 - Interstitial. When navigation occurs the UA can present the user a screen to evaluate the destination URL, an experience description and a button to continue or return to previous site.
 - Overlays. UAs control compositing and can always render information about the navigated page over content.
@@ -85,7 +87,8 @@ This may be acceptable for same-origin transitions, since the application could 
 
 ## Same-Origin vs. Cross-Origin Navigation
 
-For navigation scenarios (scenario #1), it may be relevant whether the target URL has the same origin as the existing page. Specifically, since the user has already interacted with the origin, it may be reasonable for implementations to be more permissive in such cases. UAs could navigate seamlessly on the same origin and show a modal dialog on cross-origin navigation. Users would have the chance to evaluate the URL and decide to continue or return to the previous origin.
+For navigation scenarios (scenario #1), it may be relevant whether the target URL has the same origin as the existing page. Specifically, since the user has already interacted with the origin, it may be reasonable for implementations to be more permissive in such cases. UAs could navigate seamlessly on the same origin which reduces friction.
+Another benefit of same origin navigation is that resources might be cached already which will speed up the navigation.
 
 ## References
 
